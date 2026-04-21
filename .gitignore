@@ -1,0 +1,59 @@
+# =========================
+# Java / Maven
+# =========================
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+logs/
+
+# =========================
+# Spring Boot
+# =========================
+application-local.yml
+application-dev.yml
+
+# =========================
+# IDE - IntelliJ
+# =========================
+.idea/
+*.iml
+out/
+
+# =========================
+# Eclipse (por si acaso)
+# =========================
+.classpath
+.project
+.settings/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Maven Wrapper (sí se sube normalmente, pero no el cache)
+# =========================
+.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# Node (si algún microservicio lo usa en el futuro)
+# =========================
+node_modules/
+
+# =========================
+# Docker
+# =========================
+*.pid
+
+# =========================
+# Secrets (CRÍTICO)
+# =========================
+.env
+*.env
