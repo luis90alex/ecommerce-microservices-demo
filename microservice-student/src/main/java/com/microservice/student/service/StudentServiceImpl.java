@@ -1,8 +1,8 @@
 package com.microservice.student.service;
 
+import com.microservice.student.dto.StudentDto;
 import com.microservice.student.entities.Student;
 import com.microservice.student.persistence.StudentRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,7 +33,15 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<Student> findByCourseId(Long courseId) {
-        return studentRepository.findByCourseId(courseId);
+    public List<StudentDto> findByCourseId(Long courseId) {
+        return studentRepository.findByCourseId(courseId).stream()
+                .map(student -> {
+                    StudentDto dto = new StudentDto();
+                    dto.setName(student.getName());
+                    dto.setLastName(student.getLastName());
+                    dto.setEmail(student.getEmail());
+                    dto.setCourseId(student.getCourseId());
+                    return dto;
+                }).toList();
     }
 }

@@ -1,6 +1,7 @@
 package com.microservice.student.controller;
 
 
+import com.microservice.student.dto.StudentDto;
 import com.microservice.student.entities.Student;
 import com.microservice.student.service.StudentService;
 import org.springframework.http.HttpStatus;
@@ -34,8 +35,8 @@ public class StudentController {
         return ResponseEntity.ok(studentService.findAll());
     }
 
-    @GetMapping("/searchByCourseId/{id}")
-    public ResponseEntity<?> findByCourseId(@PathVariable Long courseId) {
+    @GetMapping("/searchByCourseId/{courseId}")
+    public ResponseEntity<List<StudentDto>> findByCourseId(@PathVariable Long courseId) {
         return ResponseEntity.ok(studentService.findByCourseId(courseId));
     }
 }
