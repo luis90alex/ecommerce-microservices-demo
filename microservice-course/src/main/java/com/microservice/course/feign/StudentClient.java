@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @FeignClient(name = "microservice-student")
-@RequestMapping("/student")
 public interface StudentClient {
 
-    @GetMapping("/searchByCourseId/{id}")
+    @GetMapping("/student/searchByCourseId/{id}")
     List<StudentDto> findStudentsByCourseId(@PathVariable("id") Long courseId);
 }
