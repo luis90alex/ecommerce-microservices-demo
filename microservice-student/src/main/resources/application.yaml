@@ -7,10 +7,14 @@ spring:
     url: jdbc:mysql://localhost:3306/studentDb
     username: ${MYSQL_USER}
     password: ${MYSQL_USER}
+  sql:
+    init:
+      mode: always
   jpa:
     hibernate:
       ddl-auto: update
     database: mysql
+    defer-datasource-initialization: true
   config:
     import: optional:configserver:http://localhost:8088 # Search the config in Config server. Optional
 
