@@ -1,5 +1,6 @@
 package com.microservice.course.service;
 
+import com.microservice.course.dto.response.StudentsByCourseIdResponse;
 import com.microservice.course.entities.Course;
 import com.microservice.course.persistence.CourseRepository;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,10 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public Course save(Course course) {
         return courseRepository.save(course);
+    }
+
+    @Override
+    public StudentsByCourseIdResponse findStudentsByCourseId(Long id) {
+        return null;
     }
 }
