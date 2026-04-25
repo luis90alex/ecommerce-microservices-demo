@@ -8,7 +8,7 @@ public class StudentsByCourseIdResponse {
 
     private String courseName;
     private String teacher;
-    private List<StudentDto> studentDtoList;
+    private List<StudentResponse> students;
 
     public StudentsByCourseIdResponse() {
     }
@@ -29,11 +29,11 @@ public class StudentsByCourseIdResponse {
         this.teacher = teacher;
     }
 
-    public List<StudentDto> getStudentDtoList() {
-        return studentDtoList;
+    public List<StudentResponse> getStudents() {
+        return students;
     }
 
-    public void setStudentDtoList(List<StudentDto> studentDtoList) {
-        this.studentDtoList = studentDtoList;
+    public void setStudents(List<StudentResponse> studentsList) {
+        this.students = studentsList;
     }
 }
