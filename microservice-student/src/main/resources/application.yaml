@@ -1,26 +1,5 @@
-server:
-  port: 8090
 spring:
   application:
     name: microservice-student
-  datasource:
-    url: jdbc:mysql://localhost:3306/studentDb
-    username: root
-    password: password.123
-  sql:
-    init:
-      mode: always
-  jpa:
-    hibernate:
-      ddl-auto: update
-    database: mysql
-    defer-datasource-initialization: true
   config:
-    import: optional:configserver:http://localhost:8088 # Search the config in Config server. Optional
-eureka:
-  instance:
-    hostname: localhost
-    instance-id: ${spring.application.name}:${server.port}
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+    import: optional:configserver:http://localhost:8088

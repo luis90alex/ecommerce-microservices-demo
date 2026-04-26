@@ -1,3 +1,12 @@
+server:
+  port: 8888
 spring:
   application:
     name: microservice-config
+  profiles:
+    active: native  # Use local filesystem (native) instead of Git
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configurations  # Folder where config files are stored

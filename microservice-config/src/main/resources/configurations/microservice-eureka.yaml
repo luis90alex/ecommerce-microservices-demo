@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: microservice-eureka
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false # Eureka not self registered
+    fetch-registry: false # No need to download the list of registered services
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
