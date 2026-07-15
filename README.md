@@ -1,6 +1,6 @@
-# E-Commerce Microservices Demo
+# E-Commerce Microservices Platform
 
-A demo project illustrating a microservices architecture using Spring Boot and Spring Cloud. Built for learning purposes.
+A microservices architecture for an e-commerce backend, built with Spring Boot and Spring Cloud.
 
 ---
 
@@ -133,7 +133,7 @@ GET http://localhost:8080/student/all
               └─► Forwards to http://<instance-ip>:8090/student/all
 ```
 
-> **Note:** In this local demo, nothing prevents a client from calling a service directly (e.g. `http://localhost:8090/student/all`). The gateway is the intended entry point, but there is no network-level enforcement.
+> **Note:** In this local setup, nothing prevents a client from calling a service directly (e.g. `http://localhost:8090/student/all`). The gateway is the intended entry point, but there is no network-level enforcement.
 
 ### Gateway Routes
 
@@ -162,7 +162,7 @@ This call is triggered when a client requests `GET /course/search-students/{id}`
 
 ### How it works
 
-`microservice-config` runs in **native mode**, meaning it reads configuration files directly from a local directory on its classpath rather than from a Git repository. This is a dev/demo setup — in production, native mode would typically read from an external filesystem path or a Git-backed store.
+`microservice-config` runs in **native mode**, meaning it reads configuration files directly from a local directory on its classpath rather than from a Git repository. This is a local development setup — in production, native mode would typically read from an external filesystem path or a Git-backed store.
 
 **Location of config files inside `microservice-config`:**
 
