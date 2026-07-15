@@ -1,6 +1,6 @@
-# E-Commerce Microservices Platform
+# Spring Cloud Microservices Reference
 
-A microservices architecture for an e-commerce backend, built with Spring Boot and Spring Cloud.
+A reference implementation of a Spring Cloud microservices architecture — service discovery, centralized configuration, API gateway routing, and inter-service calls — applied to a student enrollment and course management domain.
 
 ---
 
@@ -50,7 +50,7 @@ Each service registers independently with Eureka. The gateway resolves `lb://` U
         │  registers                  registers            ▼
         │                                        ┌──────────────────┐
         │◄───────────────────────────────────────│microservice-     │
-        │  registers + discovers lb:// URIs      │gateway           │
+        │  discovers lb:// URIs                  │gateway           │
         │                                        │(port 8080)       │
         │                                        └────────▲─────────┘
         │                                                 │

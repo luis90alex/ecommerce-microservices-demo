@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk 'NR==52{print length\\($0\\)} NR==53{print length\\($0\\)}' README.md)",
+      "Bash(awk 'NR==52 || NR==53' README.md)",
+      "Bash(python3 *)",
+      "Bash(xargs -I{} basename {})"
+    ]
+  }
+}
